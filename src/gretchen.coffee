@@ -15,7 +15,6 @@
 #   Richard Hunt <>
 
 module.exports = (robot) ->
-  console.log robot
   robot.router.post '/hubot/chatsecrets/:room', (req, res) ->
 
     try
@@ -30,7 +29,7 @@ module.exports = (robot) ->
 
       robot.messageRoom room, "I have a secret: #{req.body && req.body.secret}"
       res.writeHead 200, 'OK'
-    catch e
-      res.writeHead 500, e.message
+    catch error
+      res.writeHead 500, error.stack
 
     res.end()

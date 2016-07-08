@@ -1,7 +1,7 @@
 {
   "name": "hubot-gretchen",
   "description": "Creates a HTTP endpoint to tell hubot secrets.  Like Gretchen Weiners.",
-  "version": "0.0.5",
+  "version": "0.0.6",
   "author": "Richard Hunt <>",
   "license": "MIT",
   "keywords": "hubot, hubot-scripts",
