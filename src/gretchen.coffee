@@ -15,12 +15,22 @@
 #   Richard Hunt <>
 
 module.exports = (robot) ->
-  
- robot.router.post '/hubot/chatsecrets/:room', (req, res) ->
-    room   = req.params.room
-    data   = if req.body.payload? then JSON.parse req.body.payload else req.body
-    secret = data.secret
-    console.log "Send", send
-    robot.messageRoom room, "I have a secret: #{secret}"
+  console.log robot
+  robot.router.post '/hubot/chatsecrets/:room', (req, res) ->
 
-    res.send 'OK'
+    try:
+      # return
+
+      #room = req.params.room
+      room = req.params[ 0 ]
+      # secret = req.body.secret
+      # data = if req.body.payload? then JSON.parse req.body.payload else req.body
+      # secret = data.secret
+      # console.log "Send", send
+
+      robot.messageRoom room, "I have a secret: #{req.body && req.body.secret}"
+      res.writeHead 200, 'OK'
+    catch e:
+      res.writeHead 500, e.message
+
+    res.end()
