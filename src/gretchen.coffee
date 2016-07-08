@@ -18,18 +18,7 @@ module.exports = (robot) ->
   robot.router.post '/hubot/chatsecrets/:room', (req, res) ->
 
     try
-      # return
-
-      #room = req.params.room
-      room = req.params[ 0 ]
-      # secret = req.body.secret
-      # data = if req.body.payload? then JSON.parse req.body.payload else req.body
-      # secret = data.secret
-      # console.log "Send", send
-
-      console.log req.params, req.body
-
-      robot.messageRoom room, "I have a secret: #{req.body && req.body.secret}"
+      robot.messageRoom req.params.room, "I have a secret: #{req.body && req.body.secret}"
       res.writeHead 200, 'OK'
     catch error
       res.writeHead 500, 'Internal Server Error'
