@@ -30,6 +30,7 @@ module.exports = (robot) ->
       robot.messageRoom room, "I have a secret: #{req.body && req.body.secret}"
       res.writeHead 200, 'OK'
     catch error
-      res.writeHead 500, error.stack
+      res.writeHead 500, 'Internal Server Error'
+      res.write error.stack
 
     res.end()
