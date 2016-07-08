@@ -14,7 +14,7 @@ Then add **hubot-hubot-listen** to your `external-scripts.json`:
 
 ```json
 [
-  "hubot-hubot-listen"
+  "hubot-gretchen"
 ]
 ```
 
