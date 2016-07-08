@@ -17,11 +17,11 @@
 module.exports = (robot) ->
   robot.router.post '/hubot/chatsecrets/:room', (req, res) ->
 
-    try
-      robot.messageRoom req.params.room, "I have a secret: #{req.body && req.body.secret}"
-      res.writeHead 200, 'OK'
-    catch error
-      res.writeHead 500, 'Internal Server Error'
-      res.write error.stack
+    # try
+    robot.messageRoom req.params.room, "I have a secret: #{req.body && req.body.secret}"
+    #   res.writeHead 200, 'OK'
+    # catch error
+    #   res.writeHead 500, 'Internal Server Error'
+    #   res.write error.stack
 
-    res.end()
+    res.send('OK')
