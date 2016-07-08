@@ -20,7 +20,7 @@ module.exports = (robot) ->
     room   = req.params.room
     data   = if req.body.payload? then JSON.parse req.body.payload else req.body
     secret = data.secret
-
+    console.log "Send", send
     robot.messageRoom room, "I have a secret: #{secret}"
 
     res.send 'OK'
