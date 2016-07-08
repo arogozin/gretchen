@@ -1,16 +1,16 @@
-# hubot-hubot-listen
+# hubot-gretchen
 
 Creates a HTTP endpoint to tell hubot secrets.  Like Gretchen Weiners.
 
-See [`src/hubot-listen.coffee`](src/hubot-listen.coffee) for full documentation.
+See [`src/gretchen.coffee`](src/gretchen.coffee) for full documentation.
 
 ## Installation
 
 In hubot project repo, run:
 
-`npm install hubot-hubot-listen --save`
+`npm install hubot-gretchen --save`
 
-Then add **hubot-hubot-listen** to your `external-scripts.json`:
+Then add **hubot-gretchen** to your `external-scripts.json`:
 
 ```json
 [
@@ -21,6 +21,6 @@ Then add **hubot-hubot-listen** to your `external-scripts.json`:
 ## Sample Interaction
 
 ```
-user1>> hubot hello
-hubot>> hello!
+// raw json, must specify Content-Type: application/json
+curl -X POST -H "Content-Type: application/json" -d '{"secret":"I'm up to no good"}' http://127.0.0.1:8080/hubot/chatsecrets/room
 ```
