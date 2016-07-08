@@ -8,6 +8,8 @@ describe 'hubot-listen', ->
   request = null
   response = null
 
+  
+
   beforeEach ->
     @fn = null
     @robot =
