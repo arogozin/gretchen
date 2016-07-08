@@ -27,6 +27,8 @@ module.exports = (robot) ->
       # secret = data.secret
       # console.log "Send", send
 
+      console.log req.params, req.body
+
       robot.messageRoom room, "I have a secret: #{req.body && req.body.secret}"
       res.writeHead 200, 'OK'
     catch error
