@@ -8,13 +8,13 @@ See [`src/gretchen.coffee`](src/gretchen.coffee) for full documentation.
 
 In hubot project repo, run:
 
-`npm install hubot-gretchen --save`
+`npm install hubot-frank --save`
 
 Then add **hubot-gretchen** to your `external-scripts.json`:
 
 ```json
 [
-  "hubot-gretchen"
+  "hubot-frank"
 ]
 ```
 
