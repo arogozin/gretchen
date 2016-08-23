@@ -1,13 +1,13 @@
 {
-  "name": "hubot-gretchen",
-  "description": "Creates a HTTP endpoint to tell hubot secrets.  Like Gretchen Weiners.",
+  "name": "hubot-frank",
+  "description": "Creates a HTTP endpoint to tell hubot what to do.  Like Frank Underwood.",
   "version": "0.0.12",
-  "author": "Richard Hunt <>",
+  "author": "Richard Hunt, Aleksandr Rogozin <>",
   "license": "MIT",
   "keywords": "hubot, hubot-scripts",
   "repository": {
     "type": "git",
-    "url": "git://github.com/richardhunt/gretchen.git"
+    "url": "git://github.com/arogozin/hubot-frank.git"
   },
   "bugs": {
     "url": "https://github.com/hubot-scripts/hubot-hubot-listen/issues"
