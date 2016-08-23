@@ -15,7 +15,7 @@
 #   Richard Hunt <>
 
 module.exports = (robot) ->
-  robot.router.post '/hubot/chatsecrets/:room', (req, res) ->
+  robot.router.post '/hubot/tellfrank/:room', (req, res) ->
     console.log req.params.room, "#{req.body && req.body.secret}"
     robot.messageRoom req.params.room, "#{req.body && req.body.secret}"
     res.send('OK')
